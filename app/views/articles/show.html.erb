@@ -1,0 +1,16 @@
+<div id="content">
+  <p>
+    <strong>Created:</strong>
+    <%= @article.created_at.in_time_zone('Central Time (US & Canada)') %>
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+  </p>
+
+  <p>
+    <strong>Message:</strong>
+    <%= @article.text %>
+  </p>
+</div>

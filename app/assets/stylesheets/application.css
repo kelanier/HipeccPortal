@@ -1,0 +1,43 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+ html
+ {
+   background: #222 url(/wp-content/uploads/2011/09/bg.png);
+ }
+ body
+ {
+   width: 1600px;
+   margin: 50px auto 0 auto;
+   font-family: 'Trebuchet MS', Arial, Helvetica;
+   font-size:small;
+ }
+ #content
+ {
+   background-color: #fff;
+   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+   background-image: -webkit-linear-gradient(top, #fff, #ddd);
+   background-image:    -moz-linear-gradient(top, #fff, #ddd);
+   background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+   background-image:      -o-linear-gradient(top, #fff, #ddd);
+   background-image:         linear-gradient(top, #fff, #ddd);
+   -moz-border-radius: 0 2px 2px 2px;
+   -webkit-border-radius: 0 2px 2px 2px;
+   border-radius: 0 2px 2px 2px;
+   -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+   -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+   box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+   padding: 30px;
+ }
