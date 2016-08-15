@@ -1,29 +1,39 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<div id="content">
+   <h1>Users#new</h1>
+   <p>Find me in app/views/users/new.html.erb</p>
 
-<% @page_title = "UserAuth | Signup" %>
-<div class="Sign_Form">
-  <h1>Sign Up</h1>
-  <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-    <p> First Name:</br> <%= f.text_field :first_name%> </p>
-    <p> Last Name:</br> <%= f.text_field :last_name%> </p>
-    <p> Username:</br> <%= f.text_field :username%> </p>
-    <p> Password:</br> <%= f.password_field :password%></p>
-    <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
-    <p> Organization:</br> <%= f.text_field :organization%></p>
-    <p> Street:</br> <%= f.text_field :address_street%></p>
-    <p> City:</br> <%= f.text_field :address_city%></p>
-    <p> State:</br> <%= f.text_field :address_state%></p>
-    <p> Country:</br> <%= f.text_field :address_country%></p>
-    <p> Email:</br> <%= f.text_field :email%> </p>
+   <% @page_title = "UserAuth | Signup" %>
+   <div class="Sign_Form">
+     <center><h1>Sign Up</h1></center>
+     <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+       <center>
+       <p> First Name:</br> <%= f.text_field :first_name%>
+       <p> Last Name:</br> <%= f.text_field :last_name%> </p>
+       <p> Username:</br> <%= f.text_field :username%> </p>
+       <p> Password:</br> <%= f.password_field :password%></p>
+       <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+       <p> Organization:</br> <%= f.text_field :organization%></p>
+       <p> Street:</br> <%= f.text_field :address_street%></p>
+       <p> City:</br> <%= f.text_field :address_city%></p>
+       <p> State:</br> <%= f.text_field :address_state%></p>
+       <p> Country:</br> <%= f.text_field :address_country%></p>
+       <p> Email:</br> <%= f.text_field :email%> </p>
 
-    <%= f.submit :Signup %>
-  <% end %>
-  <% if @user.errors.any? %>
-    <ul class="Signup_Errors">
-    <% for message_error in @user.errors.full_messages %>
-      <li>* <%= message_error %></li>
-    <% end %>
-    </ul>
-  <% end %>
+       <%= f.submit :Signup %>
+
+     </center>
+     <% end %>
+
+     <center><%= flash[:notice]%></center>
+
+     <center>
+     <% if @user.errors.any? %>
+       <ul class="Signup_Errors">
+       <% for message_error in @user.errors.full_messages %>
+         <li>* <%= message_error %> </li>
+       <% end %>
+       </ul>
+     <% end %>
+     </center>
+   </div>
 </div>

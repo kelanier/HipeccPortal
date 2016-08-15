@@ -5,7 +5,6 @@ class UsersController < ApplicationController
   end
 
   def create
-    puts params.to_json
     @user = User.new(user_params)
     if @user.save
       flash[:notice] = "You signed up successfully"
