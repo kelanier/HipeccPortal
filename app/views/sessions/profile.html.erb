@@ -1,5 +1,7 @@
 <div id="content">
   <center>
-    <h2 class='User_Header'> <%=@current_user.username%> Profile <h2>
+    <h2 class='User_Header'> <%=@current_user.username%> Profile </h2>
+    <%= link_to('Home', home_url) %>
+    <%= link_to('logout', logout_url) %>
   </center>
 </div>
