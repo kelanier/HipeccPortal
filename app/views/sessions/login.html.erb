@@ -1,4 +1,4 @@
-<div #content>
+<div id="content">
   <center>
     <% @page_title = "UserAuth | Login" -%>
     <div class= "Sign_Form">
@@ -7,6 +7,7 @@
         <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p>
         <p>Password:</br> <%= password_field_tag :login_password %></p>
         <%= submit_tag("Log In") %>
+        <%= link_to 'Sign_Up', 'users#new' %>
       <% end %>
     </div>
   </center>

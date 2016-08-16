@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
 
   def logout
     session[:user_id] = nil
-    redirect_to :action => 'login'
+    redirect_to :action => 'sessions#login'
   end
 
   def login_attempt
@@ -22,7 +22,7 @@ class SessionsController < ApplicationController
   end
 
   before_filter :authenticate_user, :only => [:home, :profile, :setting]
-  before_filter :save_login_state, :only => [:login, :login_attempt]
+  #before_filter :save_login_state, :only => [:login, :login_attempt]
 
 
 
