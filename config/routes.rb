@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   get 'users/new'
 
+  get 'articles/index'
+
   resources :articles
   #root 'articles#index'
 
@@ -25,7 +27,7 @@ Rails.application.routes.draw do
   get "profile", :to => "sessions#profile"
   get "setting", :to => "sessions#setting"
   get "articles", :to => "articles#index"
-
+  
 
 
 
