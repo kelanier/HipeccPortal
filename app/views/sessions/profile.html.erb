@@ -1,8 +1,8 @@
 <div id="content">
   <center>
-    <h2 class='User_Header'> <%=@current_user.username%> Profile </h2>
+    <h2 class='User_Header'> Profile For: <%=@current_user.username%> </h2>
     <%= link_to('Home', home_url) %>
+    <%= link_to('HPC Request', articles_url) %>
     <%= link_to('Logout', logout_url) %>
-    <%= link_to('Create Message', articles_url) %>
   </center>
 </div>
