@@ -1,24 +1,23 @@
 Rails.application.routes.draw do
+
+
   get 'sessions/login'
-
   get 'sessions/logout'
-
   get 'sessions/home'
-
   get 'sessions/profile'
-
   get 'sessions/setting'
-
   get 'users/new'
-
+  get 'users/edit'
 
   resources :articles
   #root 'articles#index'
 
   resources :users
   #root 'users#new'
+
   root :to => "sessions#login"
   get "signup", :to => "users#new"
+  post "update", :to => "users#update"
   get "login", :to => "sessions#login"
   post "login_attempt", :to => "sessions#login_attempt"
   get "logout", :to => "sessions#logout"

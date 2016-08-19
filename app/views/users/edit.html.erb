@@ -1,0 +1,54 @@
+<div id="content">
+
+     <% @page_title = "UserAuth | Update" %>
+     <div class="input">
+       <center><h1>Update Account</h1></center>
+       <%= form_for [current_user] do |f| %>
+         <center>
+           <p><strong>Username:</strong>
+             <%= @user.username %>
+              </br> <%= f.text_field :username%>
+           </p>
+           <p><strong>Password:</strong>
+              </br> <%= f.password_field :password %>
+           </p>
+           <p><strong>Password Confirmation:</strong>
+              </br> <%= f.password_field :password_confirmation %>
+           </p>
+           <p><strong>Organization:</strong>
+             <%= @user.organization %>
+              </br> <%= f.text_field :organization %>
+           </p>
+           <p><strong>Street:</strong>
+             <%= @user.address_street %>
+              </br> <%= f.text_field :address_street %>
+           </p>
+           <p><strong>City:</strong>
+             <%= @user.address_city %>
+              </br> <%= f.text_field :address_city%>
+           </p>
+           <p><strong>State:</strong>
+             <%= @user.address_state %>
+              </br> <%= f.text_field :address_state%>
+           </p>
+
+
+         <%= f.submit :'Submit' %>
+         <%= link_to('Sign In', login_url) %>
+
+       </center>
+       <% end %>
+
+       <center><%= flash[:notice]%></center>
+
+       <center>
+       <% if @user.errors.any? %>
+         <ul class="Signup_Errors">
+         <% for message_error in @user.errors.full_messages %>
+           <li>* <%= message_error %> </li>
+         <% end %>
+         </ul>
+       <% end %>
+       </center>
+
+</div>
