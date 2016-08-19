@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :username, :password, :password_confirmation, :organization, :address_street, :address_city, :address_state, :address_country, :email, :commit)
+    params.require(:user).permit(:first_name, :last_name, :username, :password, :password_confirmation, :organization, :address_street, :address_city, :address_state, :address_zip, :address_country, :email, :commit)
   end
 
   before_filter :save_login_state, :only => [:new, :create]

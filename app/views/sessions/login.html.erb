@@ -2,8 +2,13 @@
   <center>
     <% @page_title = "UserAuth | Login" -%>
     <div class= "Sign_Form">
-      <p><h1>High Performance Computing</h1></p>
-      <p><h1><a href="http://webs.wichita.edu/?u=ennovar&p=/index/">@ENNOVAR</a></h1></p>
+      <p>
+        <h1>
+          <a href="http://webs.wichita.edu/?u=ennovar&p=/index/">
+            <%=image_tag("Ennovar_Logo.jpg", class: "rounded_corners") %>
+          </a>
+        </h1>
+      </p> 
       <%= form_tag(:action => 'login_attempt') do %>
         <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p>
         <p>Password:</br> <%= password_field_tag :login_password %></p>
