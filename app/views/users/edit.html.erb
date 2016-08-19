@@ -3,7 +3,7 @@
      <% @page_title = "UserAuth | Update" %>
      <div class="input">
        <center><h1>Update Account</h1></center>
-       <%= form_for [current_user] do |f| %>
+       <%= form_for(:user, :url => {:controller => 'users', :action => 'update'}) do |f| %>
          <center>
            <p><strong>Username:</strong>
              <%= @user.username %>
