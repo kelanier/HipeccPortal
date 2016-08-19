@@ -14,6 +14,7 @@ class User < ActiveRecord::Base
   validates :address_street, :presence => true
   validates :address_city, :presence => true
   validates :address_state, :presence => true
+  validates :address_zip, :presence => true
   validates :address_country, :presence => true
   validates :email, :presence => true, :uniqueness => true, :format => EMAIL_REGEX
 
