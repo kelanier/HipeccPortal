@@ -14,7 +14,11 @@
     </p>
   <% end %>
 
-  <h1>Customer Requests</h1>
+  <% if @admin_user %>
+    <h1>Customer Requests</h1>
+  <% else %>
+    <h1>Your Requests</h1>
+  <% end %>
 
 
 
@@ -39,7 +43,9 @@
           <td align="center"><%= link_to '[X]', article, confirm: 'Are you sure?', :method => :delete %></td>
           <td align="center"><%= link_to '(O)', article_path(article) %></td>
           <td align="center"><%= article.title %></td>
-          
+          <% if @admin_user %>
+            <td align="center"><%= article.creator_username %></td>
+          <% end %>
         </tr>
       <% end %>
     </tbody>

@@ -23,6 +23,12 @@ class ArticlesController < ApplicationController
   def create
     @article = Article.new(article_params)
     @article.user_id = session[:user_id]
+
+    created_by = User.find_by_id(session[:user_id])
+    @article.creator_username = created_by.username
+
+    #@article.creator_username = Article.all.map {|article| article.user}
+
     @article.save
     redirect_to @article
   end
