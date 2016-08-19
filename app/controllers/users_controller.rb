@@ -12,9 +12,8 @@ class UsersController < ApplicationController
     else
       flash[:notice] = "" #I like the functionality but am not using it at this time
       flash[:color] = "invalid"
-      render "new"
     end
-
+    render "new"
   end
 
   private
