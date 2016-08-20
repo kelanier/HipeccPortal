@@ -32,6 +32,20 @@ class ArticlesController < ApplicationController
     redirect_to @article
   end
 
+  def edit
+    @article = Article.find(params[:id])
+  end
+
+  def update
+    @article = Article.find(params[:id])
+    if @article.update_attributes(article_params)
+      redirect_to articles_path, :notice => "Message updated successfully"
+    else
+      render "edit"
+    end
+  end
+
+
   def destroy
     @article = Article.find(params[:id])
     @article.destroy

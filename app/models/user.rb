@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
 
   has_many :articles
 
-  # attr_accessible :username, :email, :password, :password_confirmation
   attr_accessor :password
   EMAIL_REGEX = /\A[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}\z/i
   validates :first_name, :presence => true

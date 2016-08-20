@@ -1,10 +1,13 @@
 <div id="content">
-
-     <% @page_title = "UserAuth | Signup" %>
-     <div class="Sign_Form">
        <center><h1>Update Account</h1></center>
-       <%= form_for :user, url: user_path(@user), method: :patch do |f| %>
+       <%= form_for @user do |f| %>
          <center>
+           <p><strong>First Name:</strong>
+           </br> <%= f.text_field :first_name%>
+           </p>
+           <p><strong>Last Name:</strong>
+           </br> <%= f.text_field :last_name%>
+           </p>
            <p><strong>Username:</strong>
               </br> <%= f.text_field :username%>
            </p>
@@ -40,18 +43,15 @@
          <%= f.submit :'Submit' %>
          <%= link_to('MyProfile', profile_url) %>
 
-       </center>
        <% end %>
 
        <center><%= flash[:notice]%></center>
 
        <center>
        <% if @user.errors.any? %>
-         <ul class="Signup_Errors">
          <% for message_error in @user.errors.full_messages %>
            <li>* <%= message_error %> </li>
          <% end %>
-         </ul>
        <% end %>
        </center>
 

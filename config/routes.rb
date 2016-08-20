@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources :users
 
   root :to => "sessions#login"
-  
+
   get "signup", :to => "users#new"
   get "login", :to => "sessions#login"
   post "login_attempt", :to => "sessions#login_attempt"

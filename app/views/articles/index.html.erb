@@ -28,6 +28,7 @@
       <tr>
         <th>Date/Time</th>
         <th>Delete</th>
+        <th>Edit</th>
         <th>Open</th>
         <th>Subject</th>
         <% if @admin_user %>
@@ -41,6 +42,7 @@
         <tr>
           <td><%= article.created_at.in_time_zone('Central Time (US & Canada)') %></td>
           <td align="center"><%= link_to '[X]', article, confirm: 'Are you sure?', :method => :delete %></td>
+          <td align="center"><%= link_to '(E)', edit_article_path(article) %></td>
           <td align="center"><%= link_to '(O)', article_path(article) %></td>
           <td align="center"><%= article.title %></td>
           <% if @admin_user %>
