@@ -1,13 +1,15 @@
 <div id="content">
 
-     <% @page_title = "UserAuth | Update" %>
-     <div class="input">
+     <% @page_title = "UserAuth | Signup" %>
+     <div class="Sign_Form">
        <center><h1>Update Account</h1></center>
-       <%= form_for(:user, :url => {:controller => 'users', :action => 'update'}) do |f| %>
+       <%= form_for :user, url: user_path(@user), method: :patch do |f| %>
          <center>
            <p><strong>Username:</strong>
-             <%= @user.username %>
               </br> <%= f.text_field :username%>
+           </p>
+           <p><strong>Email:</strong>
+              </br> <%= f.text_field :email%>
            </p>
            <p><strong>Password:</strong>
               </br> <%= f.password_field :password %>
@@ -16,25 +18,27 @@
               </br> <%= f.password_field :password_confirmation %>
            </p>
            <p><strong>Organization:</strong>
-             <%= @user.organization %>
               </br> <%= f.text_field :organization %>
            </p>
            <p><strong>Street:</strong>
-             <%= @user.address_street %>
               </br> <%= f.text_field :address_street %>
            </p>
            <p><strong>City:</strong>
-             <%= @user.address_city %>
               </br> <%= f.text_field :address_city%>
            </p>
            <p><strong>State:</strong>
-             <%= @user.address_state %>
               </br> <%= f.text_field :address_state%>
+           </p>
+           <p><strong>Zip:</strong>
+              </br> <%= f.text_field :address_zip%>
+           </p>
+           <p><strong>Country:</strong>
+              </br> <%= f.text_field :address_zip%>
            </p>
 
 
          <%= f.submit :'Submit' %>
-         <%= link_to('Sign In', login_url) %>
+         <%= link_to('MyProfile', profile_url) %>
 
        </center>
        <% end %>

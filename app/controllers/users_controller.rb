@@ -17,22 +17,21 @@ class UsersController < ApplicationController
   end
 
   def edit
-    @user = User.find session[:user_id]
+    @user = User.find(params[:id])
   end
 
   def update
-    @user = User.find session[:user_id]
-    respond_to do |format|
-      if @user.update_attributes(user_params)
-        format.html {redirect_to @user, notice: 'User was successfully updated.'}
+    #@user = User.find(params[:id])
+      if @user.update_attributes(params[:user_params])
+        @user.save
+        redirect_to @user
       else
-        format.html {render action: "edit"}
+        render 'edit'
       end
-    end
   end
 
   def show
-    @user = User.find session[:user_id]
+    @user = User.find(params[:id])
   end
 
 
