@@ -6,7 +6,7 @@
     <% if @current_user.username == "Kyle.Lanier" %>
       <%= link_to('Users Accounts', users_url) %>
     <% end %>
-    <%= link_to('Edit Account', edit_user_path(@current_user)) %>
+    <%= link_to 'Edit Account', edit_user_path(@current_user) %>
     <%= link_to('Logout', logout_url) %>
   </center>
 </div>

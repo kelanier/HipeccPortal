@@ -69,7 +69,7 @@ class UsersController < ApplicationController
     params.require(:user).permit(:password, :password_confirmation, :organization, :address_street, :address_city, :address_state, :address_zip, :address_country, :email, :commit)
   end
 
-  before_filter :save_login_state, :only => [:new, :create, :update]
+  before_filter :save_login_state, :only => [:new, :create]
 
 
 end

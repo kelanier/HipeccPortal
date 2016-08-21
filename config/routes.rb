@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 
   root :to => "sessions#login"
 
+  get "edit", :to => "users#edit"
   get "signup", :to => "users#new"
   get "login", :to => "sessions#login"
   post "login_attempt", :to => "sessions#login_attempt"
