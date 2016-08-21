@@ -29,6 +29,11 @@ class ArticlesController < ApplicationController
     #@article.creator_username = Article.all.map {|article| article.user}
 
     @article.save
+
+    ArticleMailer.new_article(@article).deliver_now
+
+
+
     redirect_to @article
   end
 
