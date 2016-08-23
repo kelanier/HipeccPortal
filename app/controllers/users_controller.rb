@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   def index
     viewing_user = User.find session[:user_id]
-    if viewing_user.username == "Kyle.Lanier"
+    if viewing_user.username == ENV["ENNOVAR_HPC_ACCOUNT_USERNAME"]
       @users = User.all
       @admin_user = true
     else

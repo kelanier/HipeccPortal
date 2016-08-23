@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "EnnovarHPC@gmail.com"
+  default from: ENV["ENNOVAR_HPC_GMAIL_EMAIL"]
   layout 'mailer'
 end

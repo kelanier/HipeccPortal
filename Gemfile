@@ -4,6 +4,9 @@ ruby "2.3.1"
 
 gem 'puma'
 
+#use figaro to secure ENV variables
+gem 'figaro'
+
 #use bycrypt for handling password encryption with salt
 gem 'bcrypt'
 
