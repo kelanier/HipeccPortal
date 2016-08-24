@@ -15,7 +15,11 @@
  */
  html
  {
-   background: #222 url(/wp-content/uploads/2011/09/bg.png);
+   background: #222 url('/assets/HPC_Stats.jpg') repeat-y 0 0;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
  }
  body
  {
@@ -48,6 +52,11 @@
    box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
    padding: 30px;
  }
+#hpc_stats
+{
+  background-image: url("/home/user1/Desktop/HipeccPortal/app/assets/images/HPC_Stats.jpg");
+  background-size: cover;
+}
 .rounded_corners
 {
   border-radius: 10px 10px 10px 10px;
