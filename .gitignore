@@ -1,0 +1,5 @@
+# exclude the file containing sensitive password information from the remote repository
+config/application.yml
+config/secrets.yml
+/log/*.log
+/tmp
