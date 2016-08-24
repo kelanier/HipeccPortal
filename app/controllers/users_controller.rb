@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     if @user.save
       flash[:notice] = "You signed up successfully"
       flash[:color] = "valid"
+      UserMailer.new_user(@user).deliver_now
     else
       flash[:notice] = "" #I like the functionality but am not using it at this time
       flash[:color] = "invalid"
@@ -29,6 +30,11 @@ class UsersController < ApplicationController
 
   def edit
     @user = User.find(params[:id])
+    if @user.username == ENV["ENNOVAR_HPC_ACCOUNT_USERNAME"]
+      @admin_user = true
+    else
+      @admin_user = false
+    end
   end
 
   def update

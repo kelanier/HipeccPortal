@@ -8,8 +8,14 @@
            <p><strong>Last Name:</strong>
            </br> <%= f.text_field :last_name%>
            </p>
+
            <p><strong>Username:</strong>
-              </br> <%= f.text_field :username%>
+             <% if @admin_user == true %>
+                <%= @user.username %>
+             <% else %>
+                </br> <%= f.text_field :username%>
+             <% end %>
+
            </p>
            <p><strong>Email:</strong>
               </br> <%= f.text_field :email%>

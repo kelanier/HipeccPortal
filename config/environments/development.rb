@@ -51,7 +51,7 @@ Rails.application.configure do
     password: ENV["ENNOVAR_HPC_GMAIL_PASSWORD"]
   }
 
-  config.action_mailer.default_url_options = { host: "localhost:3000" }
+  config.action_mailer.default_url_options = { host: "http://10.16.20.66:3000" }
 
 
 

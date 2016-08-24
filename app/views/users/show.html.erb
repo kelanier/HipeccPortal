@@ -1,4 +1,35 @@
 <div id="content">
+  <p>
+    <strong>Username: </strong>
+    <%= @user.username%>
+  </p>
+  <p>
+    <strong>Created: </strong>
+    <%= @user.created_at.in_time_zone('Central Time (US & Canada)') %>
+  </p>
+  <p><strong>Name:</strong>
+    <%= @user.first_name %> <%= @user.last_name %>
+  </p>
+  <p>
+    <strong>Email:</strong>
+    <%= @user.email %>
+  </p>
+  <p>
+    <strong>Organization:</strong>
+    <%= @user.organization %>
+  </p>
+  <p>
+    <strong>Address:</strong>
+    <%= @user.address_street %>,
+    <%= @user.address_city %>,
+    <%= @user.address_state %>,
+    <%= @user.address_zip %>,
+    <%= @user.address_country %>
+  </p>
 
-
+  <p align="center">
+     <%= link_to('Home', home_url) %>
+     <%= link_to('Profile', profile_url) %>
+     <%= link_to('Logout', logout_url) %>
+  </p>
 </div>
