@@ -15,28 +15,25 @@
  */
  html
  {
-   background: #222 url('/assets/HPC_Stats.jpg') repeat-y 0 0;
-   -webkit-background-size: cover;
-   -moz-background-size: cover;
-   -o-background-size: cover;
-   background-size: cover;
+   background:  #222;
+   height: 100%;
+   width: 100%;
+   margin: 0;
+   padding: 0;
  }
  body
  {
-   width: 500px;
-   margin: 50px auto 0 auto;
-   font-family: 'Trebuchet MS', Arial, Helvetica;
-   font-size:small;
- }
- #body_article_index
- {
-   width: 1000px;
-   margin: 50px auto 0 auto;
+   /*width: 500px;
+   margin: 50px auto 0 auto;*/
+   margin: 0px;
    font-family: 'Trebuchet MS', Arial, Helvetica;
    font-size:small;
  }
  #content
  {
+   padding: 50px auto 0 auto;
+   margin-left: 20%;
+   margin-right: 20%;
    background-color: #fff;
    background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
    background-image: -webkit-linear-gradient(top, #fff, #ddd);
@@ -52,12 +49,277 @@
    box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
    padding: 30px;
  }
-#hpc_stats
-{
-  background-image: url("/home/user1/Desktop/HipeccPortal/app/assets/images/HPC_Stats.jpg");
-  background-size: cover;
-}
 .rounded_corners
 {
   border-radius: 10px 10px 10px 10px;
+}
+#login_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_sign_in_card
+{
+  width: 400px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#sign_up_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_sign_up_card
+{
+  width: 400px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#home_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_home_card
+{
+  width: 400px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#profile_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_profile_card
+{
+  width: 400px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#edit_user_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_edit_user_card
+{
+  width: 400px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#display_users_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_display_users_card
+{
+  width: 400px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#user_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_user_card
+{
+  width: 400px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#index_request_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_index_request_card
+{
+  width: 1000px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#display_request_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_display_request_card
+{
+  width: 1000px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
+}
+#edit_request_background
+{
+  background: #222 url('/assets/IBM_Server_Tower.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  height: 100vh;
+  /*width: 100vh;*/
+}
+#content_edit_request_card
+{
+  width: 1000px;
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
+  background-image: -webkit-linear-gradient(top, #fff, #ddd);
+  background-image:    -moz-linear-gradient(top, #fff, #ddd);
+  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
+  background-image:      -o-linear-gradient(top, #fff, #ddd);
+  background-image:         linear-gradient(top, #fff, #ddd);
+  -moz-border-radius: 0 2px 2px 2px;
+  -webkit-border-radius: 0 2px 2px 2px;
+  border-radius: 25px 25px 25px 25px;
+  -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
+  -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
+  padding: 30px;
 }

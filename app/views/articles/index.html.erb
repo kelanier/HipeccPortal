@@ -1,57 +1,58 @@
+<div id="index_request_background">
+  <center>
+    <div id="content_index_request_card">
+      <%= form_for :article do |f| %>
+        <p><%= f.label :title, "Subject:" %></p>
+        <p><%= f.text_field :title %></p>
 
-<div id="content">
-  <body id="body_article_index">
-  <%= form_for :article do |f| %>
-    <p><%= f.label :title, "Subject:" %></p>
-    <p><%= f.text_field :title %></p>
+        <p><%= f.label :text, "Detailed Request:" %></p>
+        <p><%= f.text_area :text %></p>
 
-    <p><%= f.label :text, "Detailed Request:" %></p>
-    <p><%= f.text_area :text %></p>
-
-    <p><%= f.submit "Submit Request"%></p>
-    <p><%= link_to('Home', home_url) %>
-       <%= link_to('Profile', profile_url) %>
-       <%= link_to('Logout', logout_url) %>
-    </p>
-  <% end %>
-
-  <% if @admin_user %>
-    <h1>Customer Requests</h1>
-  <% else %>
-    <h1>Your Requests</h1>
-  <% end %>
-
-
-
-
-  <table>
-    <thead>
-      <tr>
-        <th>Date/Time</th>
-        <th>Delete</th>
-        <th>Edit</th>
-        <th>Open</th>
-        <th>Subject</th>
-        <% if @admin_user %>
-          <th>Username</th>
-        <% end %>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @user_articles.reverse.each do |article| %>
-        <tr>
-          <td><%= article.created_at.in_time_zone('Central Time (US & Canada)') %></td>
-          <td align="center"><%= link_to '[X]', article, confirm: 'Are you sure?', :method => :delete %></td>
-          <td align="center"><%= link_to '(E)', edit_article_path(article) %></td>
-          <td align="center"><%= link_to '(O)', article_path(article) %></td>
-          <td align="center"><%= article.title %></td>
-          <% if @admin_user %>
-            <td align="center"><%= article.creator_username %></td>
-          <% end %>
-        </tr>
+        <p><%= f.submit "Submit Request"%></p>
+        <p><%= link_to('Home', home_url) %>
+           <%= link_to('Profile', profile_url) %>
+           <%= link_to('Logout', logout_url) %>
+        </p>
       <% end %>
-    </tbody>
-  </table>
-  </body>
+
+      <% if @admin_user %>
+        <h1>Customer Requests</h1>
+      <% else %>
+        <h1>Your Requests</h1>
+      <% end %>
+
+
+
+
+      <table>
+        <thead>
+          <tr>
+            <th>Date/Time</th>
+            <th>Delete</th>
+            <th>Edit</th>
+            <th>Open</th>
+            <th>Subject</th>
+            <% if @admin_user %>
+              <th>Username</th>
+            <% end %>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @user_articles.reverse.each do |article| %>
+            <tr>
+              <td><%= article.created_at.in_time_zone('Central Time (US & Canada)') %></td>
+              <td align="center"><%= link_to '[X]', article, confirm: 'Are you sure?', :method => :delete %></td>
+              <td align="center"><%= link_to '(E)', edit_article_path(article) %></td>
+              <td align="center"><%= link_to '(O)', article_path(article) %></td>
+              <td align="center"><%= article.title %></td>
+              <% if @admin_user %>
+                <td align="center"><%= article.creator_username %></td>
+              <% end %>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </center>
 </div>

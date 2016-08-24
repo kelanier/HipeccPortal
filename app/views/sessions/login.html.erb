@@ -1,21 +1,24 @@
-<div id="content">
+<div id="login_background">
   <center>
-    <% @page_title = "UserAuth | Login" -%>
-    <div class= "Sign_Form">
-      <p>
-        <h1>
-          <a href="http://webs.wichita.edu/?u=ennovar&p=/index/">
-            <%=image_tag("Ennovar_Logo.jpg", class: "rounded_corners") %>
-          </a>
-        </h1>
-      </p>
-      <%= form_tag(:action => 'login_attempt') do %>
-        <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p>
-        <p>Password:</br> <%= password_field_tag :login_password %></p>
-        <%= submit_tag("Log In") %>
-        <%= link_to('Sign Up', signup_url) %>
-      <% end %>
-    </div>
-  </center>
+  <div id="content_sign_in_card">
+    <center>
+      <% @page_title = "UserAuth | Login" -%>
+      <div class= "Sign_Form">
+        <p>
+          <h1>
+            <a href="http://webs.wichita.edu/?u=ennovar&p=/index/">
+              <%=image_tag("Ennovar_Logo.jpg", class: "rounded_corners") %>
+            </a>
+          </h1>
+        </p>
+        <%= form_tag(:action => 'login_attempt') do %>
+          <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p>
+          <p>Password:</br> <%= password_field_tag :login_password %></p>
+          <%= submit_tag("Log In") %>
+          <%= link_to('Sign Up', signup_url) %>
+        <% end %>
+      </div>
+    </center>
+  </div>
+</center>
 </div>
-  <%=image_tag("HPC_Stats.jpg", class: "HPC_Stats") %>

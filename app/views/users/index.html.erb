@@ -1,32 +1,36 @@
-<div id="content">
+<div id="display_users_background">
   <center>
-    <h1>User Accounts</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Delete</th>
-          <th>Edit</th>
-          <th>Organization</th>
-          <th>Username</th>
-        </tr>
-      </thead>
+    <div id="content_display_users_card">
+      <center>
+        <h1>User Accounts</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Delete</th>
+              <th>Edit</th>
+              <th>Organization</th>
+              <th>Username</th>
+            </tr>
+          </thead>
 
-    <tbody>
-      <% @users.each do |user| %>
-        <tr>
-          <td align="center"><%= link_to '[X]', user, confirm: 'Are you sure?', :method => :delete %></td>
-          <td align="center"><%= link_to '(E)', edit_user_path(user) %></td>
-          <td align="center"><%= user.organization %></td>
-          <td align="center"><%= user.username %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
+        <tbody>
+          <% @users.each do |user| %>
+            <tr>
+              <td align="center"><%= link_to '[X]', user, confirm: 'Are you sure?', :method => :delete %></td>
+              <td align="center"><%= link_to '(E)', edit_user_path(user) %></td>
+              <td align="center"><%= user.organization %></td>
+              <td align="center"><%= user.username %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
 
 
-  <p><%= link_to('Home', home_url) %>
-     <%= link_to('Profile', profile_url) %>
-     <%= link_to('Logout', logout_url) %>
-  </p>
-</center>
+      <p><%= link_to('Home', home_url) %>
+         <%= link_to('Profile', profile_url) %>
+         <%= link_to('Logout', logout_url) %>
+      </p>
+    </center>
+    </div>
+  </center>
 </div>

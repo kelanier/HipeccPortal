@@ -1,15 +1,19 @@
-<div id="content">
-  <center><h1>Edit Message</h1></center>
-  <%= form_for @article do |f| %>
-    <p>
-      <strong>Subject:</strong>
-      <%= f.text_field :title %>
-    </p>
+<div id="edit_request_background">
+  <center>
+    <div id="content_edit_request_card">
+      <center><h1>Edit Message</h1></center>
+      <%= form_for @article do |f| %>
+        <p>
+          <strong>Subject:</strong>
+          <%= f.text_field :title %>
+        </p>
 
-    <p>
-      <strong>Message:</strong>
-      <%= f.text_area :text %>
-    </p>
-      <p><%= f.submit "Save Changes"%></p>
-  <% end %>
+        <p>
+          <strong>Message:</strong>
+          <%= f.text_area :text %>
+        </p>
+          <p><%= f.submit "Save Changes"%></p>
+      <% end %>
+    </div>
+  </center>
 </div>

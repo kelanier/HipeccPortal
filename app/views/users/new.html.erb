@@ -1,39 +1,42 @@
-<div id="content">
+<div id="sign_up_background">
+  <center>
+    <div id="content_sign_up_card">
+     <% @page_title = "UserAuth | Signup" %>
+     <div class="Sign_Form">
+       <center><h1>Create Account</h1></center>
+       <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
+         <center>
+         <p> First Name:</br> <%= f.text_field :first_name%>
+         <p> Last Name:</br> <%= f.text_field :last_name%> </p>
+         <p> Username:</br> <%= f.text_field :username%> </p>
+         <p> Password:</br> <%= f.password_field :password%></p>
+         <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
+         <p> Organization:</br> <%= f.text_field :organization%></p>
+         <p> Street:</br> <%= f.text_field :address_street%></p>
+         <p> City:</br> <%= f.text_field :address_city%></p>
+         <p> State:</br> <%= f.text_field :address_state%></p>
+         <p> Zip Code:</br> <%= f.text_field :address_zip%></p>
+         <p> Country:</br> <%= f.text_field :address_country%></p>
+         <p> Email:</br> <%= f.text_field :email%> </p>
 
-   <% @page_title = "UserAuth | Signup" %>
-   <div class="Sign_Form">
-     <center><h1>Create Account</h1></center>
-     <%= form_for(:user, :url => {:controller => 'users', :action => 'create'}) do |f| %>
-       <center>
-       <p> First Name:</br> <%= f.text_field :first_name%>
-       <p> Last Name:</br> <%= f.text_field :last_name%> </p>
-       <p> Username:</br> <%= f.text_field :username%> </p>
-       <p> Password:</br> <%= f.password_field :password%></p>
-       <p> Password Confirmation:</br> <%= f.password_field :password_confirmation%> </p>
-       <p> Organization:</br> <%= f.text_field :organization%></p>
-       <p> Street:</br> <%= f.text_field :address_street%></p>
-       <p> City:</br> <%= f.text_field :address_city%></p>
-       <p> State:</br> <%= f.text_field :address_state%></p>
-       <p> Zip Code:</br> <%= f.text_field :address_zip%></p>
-       <p> Country:</br> <%= f.text_field :address_country%></p>
-       <p> Email:</br> <%= f.text_field :email%> </p>
+         <%= f.submit :'Submit' %>
+         <%= link_to('Sign In', login_url) %>
 
-       <%= f.submit :'Submit' %>
-       <%= link_to('Sign In', login_url) %>
-
-     </center>
-     <% end %>
-
-     <center><%= flash[:notice]%></center>
-
-     <center>
-     <% if @user.errors.any? %>
-       <ul class="Signup_Errors">
-       <% for message_error in @user.errors.full_messages %>
-         <li>* <%= message_error %> </li>
+       </center>
        <% end %>
-       </ul>
-     <% end %>
-     </center>
+
+       <center><%= flash[:notice]%></center>
+
+       <center>
+       <% if @user.errors.any? %>
+         <ul class="Signup_Errors">
+         <% for message_error in @user.errors.full_messages %>
+           <li>* <%= message_error %> </li>
+         <% end %>
+         </ul>
+       <% end %>
+       </center>
+     </div>
    </div>
+  </center>
 </div>

@@ -1,64 +1,67 @@
-<div id="content">
-       <center><h1>Update Account</h1></center>
-       <%= form_for @user do |f| %>
-         <center>
-           <p><strong>First Name:</strong>
-           </br> <%= f.text_field :first_name%>
-           </p>
-           <p><strong>Last Name:</strong>
-           </br> <%= f.text_field :last_name%>
-           </p>
+<div id="edit_user_background">
+  <center>
+    <div id="content_edit_user_card">
+           <center><h1>Update Account</h1></center>
+           <%= form_for @user do |f| %>
+             <center>
+               <p><strong>First Name:</strong>
+               </br> <%= f.text_field :first_name%>
+               </p>
+               <p><strong>Last Name:</strong>
+               </br> <%= f.text_field :last_name%>
+               </p>
 
-           <p><strong>Username:</strong>
-             <% if @admin_user == true %>
-                <%= @user.username %>
-             <% else %>
-                </br> <%= f.text_field :username%>
+               <p><strong>Username:</strong>
+                 <% if @admin_user == true %>
+                    <%= @user.username %>
+                 <% else %>
+                    </br> <%= f.text_field :username%>
+                 <% end %>
+
+               </p>
+               <p><strong>Email:</strong>
+                  </br> <%= f.text_field :email%>
+               </p>
+               <p><strong>Password:</strong>
+                  </br> <%= f.password_field :password %>
+               </p>
+               <p><strong>Password Confirmation:</strong>
+                  </br> <%= f.password_field :password_confirmation %>
+               </p>
+               <p><strong>Organization:</strong>
+                  </br> <%= f.text_field :organization %>
+               </p>
+               <p><strong>Street:</strong>
+                  </br> <%= f.text_field :address_street %>
+               </p>
+               <p><strong>City:</strong>
+                  </br> <%= f.text_field :address_city%>
+               </p>
+               <p><strong>State:</strong>
+                  </br> <%= f.text_field :address_state%>
+               </p>
+               <p><strong>Zip:</strong>
+                  </br> <%= f.text_field :address_zip%>
+               </p>
+               <p><strong>Country:</strong>
+               </br> <%= f.text_field :address_country%>
+               </p>
+
+
+             <%= f.submit :'Submit' %>
+             <%= link_to('MyProfile', profile_url) %>
+
+           <% end %>
+
+           <center><%= flash[:notice]%></center>
+
+           <center>
+           <% if @user.errors.any? %>
+             <% for message_error in @user.errors.full_messages %>
+               <li>* <%= message_error %> </li>
              <% end %>
-
-           </p>
-           <p><strong>Email:</strong>
-              </br> <%= f.text_field :email%>
-           </p>
-           <p><strong>Password:</strong>
-              </br> <%= f.password_field :password %>
-           </p>
-           <p><strong>Password Confirmation:</strong>
-              </br> <%= f.password_field :password_confirmation %>
-           </p>
-           <p><strong>Organization:</strong>
-              </br> <%= f.text_field :organization %>
-           </p>
-           <p><strong>Street:</strong>
-              </br> <%= f.text_field :address_street %>
-           </p>
-           <p><strong>City:</strong>
-              </br> <%= f.text_field :address_city%>
-           </p>
-           <p><strong>State:</strong>
-              </br> <%= f.text_field :address_state%>
-           </p>
-           <p><strong>Zip:</strong>
-              </br> <%= f.text_field :address_zip%>
-           </p>
-           <p><strong>Country:</strong>
-           </br> <%= f.text_field :address_country%>
-           </p>
-
-
-         <%= f.submit :'Submit' %>
-         <%= link_to('MyProfile', profile_url) %>
-
-       <% end %>
-
-       <center><%= flash[:notice]%></center>
-
-       <center>
-       <% if @user.errors.any? %>
-         <% for message_error in @user.errors.full_messages %>
-           <li>* <%= message_error %> </li>
-         <% end %>
-       <% end %>
-       </center>
-
+           <% end %>
+           </center>
+    </div>
+  </center>
 </div>
