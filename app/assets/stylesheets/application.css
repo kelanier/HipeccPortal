@@ -29,33 +29,13 @@
    font-family: 'Trebuchet MS', Arial, Helvetica;
    font-size:small;
  }
- #content
- {
-   padding: 50px auto 0 auto;
-   margin-left: 20%;
-   margin-right: 20%;
-   background-color: #fff;
-   background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
-   background-image: -webkit-linear-gradient(top, #fff, #ddd);
-   background-image:    -moz-linear-gradient(top, #fff, #ddd);
-   background-imege:     -ms-linear-gradient(top, #fff, #ddd);
-   background-image:      -o-linear-gradient(top, #fff, #ddd);
-   background-image:         linear-gradient(top, #fff, #ddd);
-   -moz-border-radius: 0 2px 2px 2px;
-   -webkit-border-radius: 0 2px 2px 2px;
-   border-radius: 25px 25px 25px 25px;
-   -moz-box-shadow: 0 2px 2px #000, 0 1px 0 #fff insert;
-   -webkit-box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
-   box-shadow: 0 2px 2px #000, 0 -1px 0 #fff insert;
-   padding: 30px;
- }
 .rounded_corners
 {
   border-radius: 10px 10px 10px 10px;
 }
 #login_background
 {
-  background: #222 url('/assets/IBM_Server_Tower.png');
+  background: #222 url('/assets/IBM_DataCenter.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -64,14 +44,8 @@
 }
 #content_sign_in_card
 {
-  width: 400px;
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
-  background-image: -webkit-linear-gradient(top, #fff, #ddd);
-  background-image:    -moz-linear-gradient(top, #fff, #ddd);
-  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
-  background-image:      -o-linear-gradient(top, #fff, #ddd);
-  background-image:         linear-gradient(top, #fff, #ddd);
+  width: 250px;
+  background: rgba(0, 0, 0, 0.0);
   -moz-border-radius: 0 2px 2px 2px;
   -webkit-border-radius: 0 2px 2px 2px;
   border-radius: 25px 25px 25px 25px;
@@ -82,7 +56,7 @@
 }
 #sign_up_background
 {
-  background: #222 url('/assets/IBM_Server_Tower.png');
+  background: #222 url('/assets/IBM_DataCenter.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -91,14 +65,8 @@
 }
 #content_sign_up_card
 {
-  width: 400px;
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fff), to(#ddd));
-  background-image: -webkit-linear-gradient(top, #fff, #ddd);
-  background-image:    -moz-linear-gradient(top, #fff, #ddd);
-  background-imege:     -ms-linear-gradient(top, #fff, #ddd);
-  background-image:      -o-linear-gradient(top, #fff, #ddd);
-  background-image:         linear-gradient(top, #fff, #ddd);
+  width: 250px;
+  background: rgba(0, 0, 0, 0.0);
   -moz-border-radius: 0 2px 2px 2px;
   -webkit-border-radius: 0 2px 2px 2px;
   border-radius: 25px 25px 25px 25px;

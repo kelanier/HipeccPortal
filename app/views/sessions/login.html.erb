@@ -1,24 +1,22 @@
 <div id="login_background">
-  <center>
-  <div id="content_sign_in_card">
-    <center>
-      <% @page_title = "UserAuth | Login" -%>
-      <div class= "Sign_Form">
-        <p>
-          <h1>
+  <div style="float: right;">
+        <div id="content_sign_in_card">
+          <center>
             <a href="http://webs.wichita.edu/?u=ennovar&p=/index/">
               <%=image_tag("Ennovar_Logo.jpg", class: "rounded_corners") %>
             </a>
-          </h1>
-        </p>
-        <%= form_tag(:action => 'login_attempt') do %>
-          <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p>
-          <p>Password:</br> <%= password_field_tag :login_password %></p>
-          <%= submit_tag("Log In") %>
-          <%= link_to('Sign Up', signup_url) %>
-        <% end %>
-      </div>
-    </center>
-  </div>
-</center>
+            <% @page_title = "UserAuth | Login" -%>
+            <div class= "Sign_Form">
+              <%= form_tag(:action => 'login_attempt') do %>
+                <font color="#FFF">
+                <p>Username or Email:</br> <%= text_field_tag(:username_or_email) %></p>
+                <p>Password:</br> <%= password_field_tag :login_password %></p>
+                <%= submit_tag("Log In") %>
+                <%= link_to('Sign Up', signup_url, {style: "color: #FFF"}) %>
+              </font>
+              <% end %>
+            </div>
+          </center>
+        </div>
+    </div>
 </div>
