@@ -9,9 +9,16 @@
               </a>
             </h1>
           </p>
-        <%= link_to('MyProfile', profile_url) %>
-        <%= link_to('Logout', logout_url) %>
+        <%= link_to('Request Access', articles_url,  {style: "color: #FFF"}) %>
+        <%= link_to('MyProfile', profile_url, {style: "color: #FFF"}) %>
+        <%= link_to('Logout', logout_url, {style: "color: #FFF"}) %>
       </center>
-  </div>
- </center>
+    </div>
+
+    <%=image_tag("Hardware_Available.jpg", class: "rounded_corners") %>
+    <p><p><%=image_tag("Controllers_Available.jpg", class: "rounded_corners") %> </p></p>
+    <p><p><%=image_tag("Building_Block_8.jpg", class: "rounded_corners") %></p></p>
+    <p><p><%=image_tag("Building_Block_9.jpg", class: "rounded_corners") %></p></p>
+    <p><p><%=image_tag("Building_Block_10.jpg", class: "rounded_corners") %></p></p>
+  </center>
 </div>
