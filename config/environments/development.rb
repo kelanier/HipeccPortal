@@ -42,16 +42,16 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
+    address: "smtp.sendgrid.net",
     port: 587,
     domain: ENV["ENNOVAR_HPC_DOMAIN"],
     authentication: "plain",
     enable_starttls_auto: true,
-    user_name: ENV["ENNOVAR_HPC_GMAIL_USERNAME"],
-    password: ENV["ENNOVAR_HPC_GMAIL_PASSWORD"]
+    user_name: ENV["SENDGRID_USERNAME"],
+    password: ENV["SENDGRID_PASSWORD"]
   }
 
-  config.action_mailer.default_url_options = { host: "http://10.16.20.66:3000" }
+  config.action_mailer.default_url_options = { host: "https://ennovar-hpc.herokuapp.com/" }
 
 
 
